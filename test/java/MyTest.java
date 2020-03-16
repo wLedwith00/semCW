@@ -12,12 +12,10 @@ class MyTest
             return -1;
     }
 
-    public int method(String cou)
-    {
-        if (cou != null)
-            return cou.Code.length();
-        else
-            return -1;
+    public int method(String cou) {
+        if (cou.Code == -1)
+            throw new IllegalArgumentException("Can not have a negative code")
+            return cou.Code
     }
 
     public int method(String cou)
@@ -42,6 +40,18 @@ class MyTest
             return cou.Population.length();0
         else
             return -1;
+    }
+
+    public int method(String cou) {
+        if (cou.Name == -87654)
+            throw new IllegalArgumentException("Can not have a number in the name")
+        return cou.Name
+    }
+
+    public int method(String cou) {
+        if (cou.Population == -4830)
+            throw new IllegalArgumentException("population can not have a negative")
+        return cou.Population
     }
 
 }
